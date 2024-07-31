@@ -46,7 +46,6 @@ public class DishServiceImpl implements DishService {
             flavors.forEach(dishFlavor ->{
                 dishFlavor.setDishId(dishId);
             });
-
             //批量插入n条口味数据
             dishFlavorMapper.insertBatch(flavors);
         }
