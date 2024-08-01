@@ -80,5 +80,13 @@ public class DishController {
         return Result.success();
     }
 
+    @ApiOperation("菜品起售停售")
+    @PostMapping("/status/{status}")
+    public Result status(@PathVariable Integer status,Long id){
+        log.info("菜品起售停售：{},{}",status,id);
+        dishService.status(status,id);
+        return Result.success();
+    }
+
 
 }
