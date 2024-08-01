@@ -10,6 +10,9 @@ import com.sky.vo.SetmealVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+import javax.websocket.server.ServerEndpoint;
 
 @Mapper
 public interface SetmealMapper {
@@ -30,4 +33,12 @@ public interface SetmealMapper {
      */
     @AutoFill(value = OperationType.INSERT)
     void insert(Setmeal setmeal);
+
+    @Select("select * from setmeal where id=#{id}")
+    Setmeal getById(Long id);
+
+
+    void update(Setmeal setmeal);
+
+    void deleteById(Long setmealId);
 }
