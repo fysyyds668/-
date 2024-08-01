@@ -11,4 +11,10 @@ public interface SetmealService {
      * @return
      */
     PageResult page(SetmealPageQueryDTO setmealPageQueryDTO);
+
+    /**
+     * 添加套餐
+     * @param setmealDTO
+     */
+    void save(SetmealDTO setmealDTO);
 }

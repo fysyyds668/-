@@ -35,4 +35,6 @@ public interface DishService {
      * @param id
      */
     void status(Integer status, Long id);
+
+    List<Dish> list(Long categoryId);
 }
