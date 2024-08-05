@@ -6,8 +6,15 @@ sky:
     database: sky_take_out
     username: root
     password: "@twd20040401."
+
   alioss:
     endpoint: oss-cn-beijing.aliyuncs.com
     access-key-id: LTAI5tD4dKUhqEJyX9p48Qb7
     access-key-secret: J1IZZg8zZJbjT1bljzgTfY6L4ESUlc
     bucket-name: sky-itcast-twd
+
+  redis:
+    host: localhost
+    port: 6379
+    password: "@twd20040401."
+    database: 1
