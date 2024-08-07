@@ -141,7 +141,7 @@ public class DishServiceImpl implements DishService {
 
         //插入口味信息
         List<DishFlavor> flavors = dishDTO.getFlavors();
-        if(flavors != null ||flavors.size()>0){
+        if(flavors != null &&flavors.size()>0){
             flavors.forEach(dishFlavor ->{
                 dishFlavor.setDishId(dishDTO.getId());
             });
@@ -173,7 +173,7 @@ public class DishServiceImpl implements DishService {
      * @return
      */
     public List<DishVO> listWithFlavor(Dish dish) {
-        List<Dish> dishList = dishMapper.list(dish.getCategoryId());
+        List<Dish> dishList = dishMapper.list1(dish);
 
         List<DishVO> dishVOList = new ArrayList<>();
 
