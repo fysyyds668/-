@@ -13,5 +13,10 @@ public interface ShoppingCartService {
      * 查看购物车
      * @return
      */
-    List<ShoppingCart> shoppingCart();
+    List<ShoppingCart> showShoppingCart();
+
+
+    void cleanShoppingCart();
+
+    void sub(ShoppingCartDTO shoppingCartDTO);
 }
